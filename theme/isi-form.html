@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="scss/index.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <header class="py-5">
+      <div class="container">
+        <div class="desktop">
+          <div class="d-flex align-items-center justify-content-between mb-5">
+            <div class="d-flex align-items-center">
+              <img class="mr-5" src="images/logo.png" alt="">
+              <img src="images/category-point.png" alt="">
+            </div>
+            <div class="d-flex">
+              <button class="btn-login mr-3">Masuk</button>
+              <button class="btn-regis">Daftar</button>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a href="" class="text-regular text-secondary mx-3">Vendor disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa yang paling dicari</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa terbaik</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa top bulan ini</a>
+          </div>
+        </div>
+        <div class="mobile">
+          <div class="d-flex align-items-center justify-content-between mb-5">
+            <div class="d-flex align-items-center">
+              <img class="mr-5 logo-header" src="images/logo.png" alt="">
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="images/category-point.png" alt="">
+              <i class="fas fa-bars ml-4 pointer" onclick="openSidemenu()" style="font-size: 20px;"></i>
+            </div>
+          </div>
+        </div>
+        <div id="menuside-nonlogin" class="d-flex flex-column align-items-center">
+          <i class="fas fa-times" onclick="closeSidemenu()" style="position: absolute; right: 5%; top: 10%; font-size: 20px; cursor: pointer;"></i>
+          <img src="images/logo.png" alt="">
+          <div class="d-flex mt-3 mb-5">
+            <button class="btn-login mr-3">Masuk</button>
+            <button class="btn-regis">Daftar</button>
+          </div>
+          <div class="d-flex flex-wrap justify-content-start justify-content-sm-center">
+            <a href="" class="text-regular text-secondary mx-1 my-2">Vendor disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-1 my-2">Jasa disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-1 my-2">Jasa yang paling dicari</a>
+            <a href="" class="text-regular text-secondary mx-1 my-2">Jasa terbaik</a>
+            <a href="" class="text-regular text-secondary mx-1 my-2">Jasa top bulan ini</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Login -->
+    <!-- <header class="py-5 login">
+      <div class="container">
+        <div class="desktop">
+          <div class="d-flex align-items-center justify-content-between mb-5">
+            <div class="d-flex align-items-center">
+              <img class="mr-5" src="images/logo.png" alt="">
+              <img src="images/category-point.png" alt="">
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="mr-4" src="images/icon-chat.png" alt="">
+              <img class="mr-4" src="images/icon-calendar.png" alt="">
+              <img class="mr-4" src="images/icon-notif.png" alt="">
+              <div class="d-flex align-items-center ml-3">
+                <div class="profile small mr-2">
+                  <img src="images/ex-profile-1.jpg" alt="">
+                </div>
+                <h5 class="text-bold">Andreson H</h5>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a href="" class="text-regular text-secondary mx-3">Vendor disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa yang paling dicari</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa terbaik</a>
+            <a href="" class="text-regular text-secondary mx-3">Jasa top bulan ini</a>
+          </div>
+        </div>
+        <div class="mobile">
+          <div class="d-flex align-items-center justify-content-between mb-5">
+            <div class="d-flex align-items-center">
+              <img class="mr-5 logo-header" src="images/logo.png" alt="">
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="images/category-point.png" alt="">
+              <i class="fas fa-bars ml-4 pointer" onclick="openSidemenu()" style="font-size: 20px;"></i>
+            </div>
+          </div>
+        </div>
+        <div id="menuside-nonlogin" class="d-flex flex-column align-items-center">
+          <i class="fas fa-times" onclick="closeSidemenu()" style="position: absolute; right: 5%; top: 10%; font-size: 20px; cursor: pointer;"></i>
+          <img src="images/logo.png" alt="">
+          <div class="d-flex flex-column align-items-center mt-3 mb-3">
+            <div class="d-flex align-items-center mb-3">
+              <div class="profile small mr-2">
+                <img src="images/ex-profile-1.jpg" alt="">
+              </div>
+              <h5 class="text-bold">Andreson H</h5>
+            </div>
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <img src="images/icon-chat.png" alt="">
+              <img src="images/icon-calendar.png" alt="">
+              <img src="images/icon-notif.png" alt="">
+            </div>
+          </div>
+          <div class="d-flex flex-wrap justify-content-md-start justify-content-center">
+            <a href="" class="text-regular text-secondary mx-sm-1 mx-3 my-2">Vendor disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-sm-1 mx-3 my-2">Jasa disekitarmu</a>
+            <a href="" class="text-regular text-secondary mx-sm-1 mx-3 my-2">Jasa yang paling dicari</a>
+            <a href="" class="text-regular text-secondary mx-sm-1 mx-3 my-2">Jasa terbaik</a>
+            <a href="" class="text-regular text-secondary mx-sm-1 mx-3 my-2">Jasa top bulan ini</a>
+          </div>
+        </div>
+      </div>
+    </header> -->
+    
+    <div id="content" class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Homepage</a></li>
+          <li class="breadcrumb-item">List Jasa</a></li>
+          <li class="breadcrumb-item">Detail Jasa</li>
+          <li class="breadcrumb-item active" aria-current="page">Booking</li>
+        </ol>
+      </nav>
+      <div class="banner mb-4">
+        <img src="images/banner-detail.jpg" alt="">
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-sm-7">
+          <h2 class="mb-4">Silahkan isi form berikut untuk memesan</h2>
+          <h4 class="mb-2">Tanggal Acara</h4>
+          <div class="form-group w-100 mb-4">
+            <input type="text" class="form-control w-100" id="answer" placeholder="10 November 2021">
+          </div>
+          <h4 class="mb-2">Alamat Lengkap</h4>
+          <div class="form-group w-100 mb-4">
+            <textarea class="form-control" id="alamat" rows="6" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec urna ornare id amet ut neque duis sit. Netus a, purus euismod congue sagittis eget justo est integer. Magna porttitor quisque suspendisse magna."></textarea>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <h4 class="mb-2">Provinsi</h4>
+              <input type="text" class="form-control w-100" id="provinsi" placeholder="Provinsi">
+            </div>
+            <div class="col-md-6 mb-4">
+              <h4 class="mb-2">Kota/Kabupaten</h4>
+              <input type="text" class="form-control w-100" id="provinsi" placeholder="Kota/Kabupaten">
+            </div>
+            <div class="col-md-6 mb-4">
+              <h4 class="mb-2">Kecamatan</h4>
+              <input type="text" class="form-control w-100" id="provinsi" placeholder="Kecamatan">
+            </div>
+            <div class="col-md-6 mb-4">
+              <h4 class="mb-2">Kelurahan</h4>
+              <input type="text" class="form-control w-100" id="provinsi" placeholder="Kelurahan">
+            </div>
+            <div class="col-12 mb-5">
+              <h4 class="mb-2">Keterangan (opsional)</h4>
+              <textarea class="form-control" id="alamat" rows="6" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec urna ornare id amet ut neque duis sit. Netus a, purus euismod congue sagittis eget justo est integer. Magna porttitor quisque suspendisse magna."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-5">
+          <div class="card-profile mb-5 p-4">
+            <div class="profile square mb-3">
+              <img src="images/ex-profile-3.jpg" alt="">
+            </div>
+            <h4 class="text-ptserif text-center mb-2">Micro Photographer Cinematic</h4>
+            <h5 class="text-secondary mb-4">Tangerang Selatan</h5>
+            <div class="d-flex align-items-center">
+              <img src="images/icon-verified.png" alt="">
+              <p class="text-success font-semibold ml-2">Verified Account</p>
+            </div>
+          </div>
+          <div class="card mb-5 p-4">
+            <h4 class="mb-2">Masukkan Harga Pemesanan</h4>
+            <p class="mb-4">*Harga yang dimasukkan sesuai dengan harga yang disepakati dengan vendor</p>
+            <div class="form-group w-100 mb-4">
+              <input type="text" class="form-control w-100" id="answer" placeholder="Rp 0">
+            </div>
+            <button class="btn-nego">Simpan</button>
+          </div>
+          <div class="card mb-5 p-4">
+            <h4 class="mb-2">Ringkasan Pemesanan</h4>
+            <div class="d-flex justify-content-between mb-3">
+              <p>Total bayar</p>
+              <p class="text-primary">Rp 0</p>
+            </div>
+            <a class="btn btn-booking" data-toggle="modal" data-target="#modalpay">Bayar Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a id="chat" onclick="openChat()">
+      <i class="far fa-comments"></i>
+    </a>
+
+    <!-- Modal Chat -->
+    <!-- <section id="msger">
+      <header class="msger-header">
+        <div class="msger-header-title pointer" onclick="back()">
+          <i class="fas fa-long-arrow-alt-left"></i> Back
+        </div>
+      </header>
+    
+      <main class="msger-chat">
+        <div class="msg left-msg">
+          <div
+           class="msg-img"
+           style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+          ></div>
+    
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">ADMIN</div>
+              <div class="msg-info-time">12:45</div>
+            </div>
+    
+            <div class="msg-text">
+              Hi, welcome to Alapesta 😄
+            </div>
+          </div>
+        </div>
+    
+        <div class="msg right-msg">
+          <div
+           class="msg-img"
+           style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
+          ></div>
+    
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">Sajad</div>
+              <div class="msg-info-time">12:46</div>
+            </div>
+    
+            <div class="msg-text">
+              You can change your name in JS section!
+            </div>
+          </div>
+        </div>
+      </main>
+    
+      <form class="msger-inputarea">
+        <input type="text" class="msger-input" placeholder="Enter your message...">
+        <button type="submit" class="msger-send-btn">Send</button>
+      </form>
+    </section> -->
+
+    <!-- Modal Bayar -->
+    <div class="modal fade" id="modalBayar" tabindex="-1" aria-labelledby="modalBayarLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header noborder">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 class="h3 text-secondary font-regular mb-4">Pilihlah bentuk pembayaran yang akan kamu lakukan</h1>
+            <a class="btn btn-nego mb-2" data-toggle="modal" data-target="#modalBayarDP" data-dismiss="modal" aria-label="Close">Bayar DP</a>
+            <a class="btn btn-booking mb-2" data-toggle="modal" data-target="#modalBayarFull" data-dismiss="modal" aria-label="Close">Bayar Full</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Bayar Full -->
+    <div class="modal fade" id="modalBayarFull" tabindex="-1" aria-labelledby="modalBayarFullLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header noborder">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body px-5 pb-5">
+            <h1 class="h3 font-semibold mb-2">Bayar Full</h1>
+            <h2 class="h4 font-regular mb-1">Harga yang harus dibayar</h2>
+            <h3 class="h2 text-primary mb-3">Rp 2500.000</h3>
+            <h4 class="font-regular mb-1">Metode Pembayaran</h4>
+            <form action="">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">BANK</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">BANK</label>
+              </div>
+              <div class="form-check mb-BANK">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">BANK</label>
+              </div>
+            </form>
+            <a class="btn btn-booking mt-4">Lanjutkan pembayaran</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Bayar DP -->
+    <div class="modal fade" id="modalBayarDP" tabindex="-1" aria-labelledby="modalBayarDPLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header noborder">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body px-5 pb-5">
+            <h1 class="h3 font-semibold mb-2">Bayar DP</h1>
+            <h2 class="h4 font-regular mb-1">Harga yang harus dibayar</h2>
+            <h3 class="h2 text-primary mb-1">Rp 2500.000</h3>
+            <p class="text-danger mb-3">*Pelunasan dibayar H-1 acara</p>
+            <h4 class="font-regular mb-1">Metode Pembayaran</h4>
+            <form action="">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">BANK</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">BANK</label>
+              </div>
+              <div class="form-check mb-BANK">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">BANK</label>
+              </div>
+            </form>
+            <a class="btn btn-booking mt-4">Bayar Full</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Tata Cara Pembayaran -->
+    <div class="modal fade" id="modalpay" tabindex="-1" aria-labelledby="modalpayLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header noborder">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <svg viewBox="0 0 100 100" class="animate mb-5">
+              <filter id="dropshadow" height="100%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+                <feFlood flood-color="rgba(76, 175, 80, 1)" flood-opacity="0.5" result="color"/>
+                <feComposite in="color" in2="blur" operator="in" result="blur"/>
+                <feMerge> 
+                  <feMergeNode/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              
+              <circle cx="50" cy="50" r="46.5" fill="none" stroke="rgba(76, 175, 80, 0.5)" stroke-width="5"/>
+              
+              <path d="M67,93 A46.5,46.5 0,1,0 7,32 L43,67 L88,19" fill="none" stroke="rgba(76, 175, 80, 1)" stroke-width="5" stroke-linecap="round" stroke-dasharray="80 1000" stroke-dashoffset="-220"  style="filter:url(#dropshadow)"/>
+            </svg>
+            <h1 class="h2 text-center mb-2">Selamat!</h1>
+            <h2 class="font-regular text-center mb-4">Transaksi anda telah berhasil!</h2>
+            <h3 class="font-regular text-center mb-4">Silahkan lakukan pembayaran ke nomor rekening berikut</h3>
+            <h4 class="h2 font-bold text-center mb-1 text-primary">1201 5544 8990</h4>
+            <h5 class="font-regular text-center mb-4 text-secondary">a/n PT. Alapesta Indonesia</h5>
+            <h6 class="h3 font-regular mb-2">Tata cara pembayaran</h6>
+            <p class="mb-2">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing mattis viverra massa. Non nulla id ac nulla scelerisque dictumst. </p>
+            <p class="mb-2">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing mattis viverra massa. Non nulla id ac nulla scelerisque dictumst. </p>
+            <p class="mb-2">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In adipiscing mattis viverra massa. Non nulla id ac nulla scelerisque dictumst. </p>
+            <a class="btn btn-nego mt-5 mb-2">Detail transaksi</a>
+            <a class="btn btn-booking mb-2">Kembali ke Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class JasaSekitar extends Controller
+class VendorSekitar extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class JasaSekitar extends Controller
     public function index()
     {
         //
-        return view('front.layout.jasa.list-jasa-sekitar');
+        return view('front.layout.vendor.list-vendor-sekitar');
     }
 
     /**

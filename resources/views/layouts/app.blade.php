@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('assets/css/style-pagination.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('assets/scss/index.css') }}">
+    
 
     <title>Hello, world!</title>
   </head>

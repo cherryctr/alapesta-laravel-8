@@ -18,15 +18,17 @@
       </div>
   
       <div class="for_slick_slider center my-5">
+      
+      <!-- looping banner -->
+      @foreach( $banner as $banners )
         <div class="items">
-          <img src="{{ asset('assets/images/slides-1.jpg') }}" alt="">
+          <img src="{{ $banners->photo_banner  }}" alt="">
         </div>
-        <div class="items">
-          <img src="{{ asset('assets/images/slides-1.jpg') }}" alt="">
-        </div>
-        <div class="items">
-          <img src="{{ asset('assets/images/slides-1.jpg') }}" alt="">
-        </div>
+      @endforeach
+      <!-- end looping banner -->
+      
+          
+        
       </div>
   
       <div class="container">
@@ -34,24 +36,11 @@
           <h2 class="text-ptserif mb-2">Kategori</h2>
           <h5 class="font-light mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h5>
           <div class="row">
+            @foreach( $kategoris as $kategori )
             <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">
-              <img src="{{ asset('assets/images/kat-gedung.png')  }}" alt="">
+              <img src="{{ $kategori->icon }}" alt="{{ $kategori->nama_kategori }}" />
             </div>
-            <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">
-              <img src="{{ asset('assets/images/kat-katering.png')  }}" alt="">
-            </div>
-            <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">
-              <img src="{{ asset('assets/images/kat-rias.png')  }}" alt="">
-            </div>
-            <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">
-              <img src="{{ asset('assets/images/kat-photo.png')  }}" alt="">
-            </div>
-            <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">
-              <img src="{{ asset('assets/images/kat-dekorasi.png')  }}" alt="">
-            </div>
-            <div class="col-xl-2 col-md-3 col-sm-4 col-6 mb-2">
-              <img src="{{ asset('assets/images/kat-entertainment.png')  }}">
-            </div>
+            @endforeach
           </div>
         </div>
         <div class="mb-5">
@@ -61,12 +50,13 @@
             <a href="" class="h5 font-regular color-primary text-bold link">lihat semua</a>
           </div>
           <div class="row">
+            @foreach( $vendors as $vendor )
             <div class="col-md-4 col-sm-6 mb-4">
               <div class="card">
-                <img src="{{ asset('assets/images/vendor-1.jpg') }}" class="card-img-top" alt="...">
+                <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="{{ $vendor->nama_vendor }}">
                 <div class="card-body">
-                  <h4 class="mb-2">Wedding March Factory</h4>
-                  <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
+                  <h4 class="mb-2">{{ $vendor->nama_vendor }}</h4>
+                  <p class="mb-2 font-light">{{ $vendor->alamat_lengkap  }}</p>
                   <div class="d-flex">
                     <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
                     <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
@@ -77,86 +67,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="{{ asset('assets/images/vendor-2.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4 class="mb-2">Wedding March Factory</h4>
-                    <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                    <div class="d-flex">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="{{ asset('assets/images/vendor-3.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4 class="mb-2">Wedding March Factory</h4>
-                    <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                    <div class="d-flex">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="{{ asset('assets/images/vendor-4.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4 class="mb-2">Wedding March Factory</h4>
-                    <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                    <div class="d-flex">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="{{ asset('assets/images/vendor-5.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4 class="mb-2">Wedding March Factory</h4>
-                    <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                    <div class="d-flex">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="{{ asset('assets/images/vendor-6.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4 class="mb-2">Wedding March Factory</h4>
-                    <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                    <div class="d-flex">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                        <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
           </div>
         </div>
         <div class="mb-5">
@@ -166,12 +77,13 @@
             <a href="" class="h5 font-regular color-primary text-bold link">lihat semua</a>
           </div>
           <div class="row">
+            @foreach( $jasas as $jasa )
             <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
               <div class="card noborder">
-                <img src="{{ asset('assets/images/jasa-1.jpg') }}" class="card-img-top" alt="...">
+                <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="{{ $jasa->nama_jasa }}">
                 <div class="card-body no-paddingleft">
-                  <h4 class="mb-2">Wedding March Factory</h4>
-                  <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
+                  <h4 class="mb-2">{{ $jasa->nama_jasa }}</h4>
+                  <p class="mb-2 font-light">{{ $jasa->nama_daerah }}</p>
                   <div class="d-flex mb-2">
                     <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
                     <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
@@ -179,66 +91,16 @@
                     <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
                     <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
                   </div>
-                  <h2 class="text-primary text-ptserif">Rp 1500.000</h2>
+                  <h2 class="text-primary text-ptserif">Rp. {{ number_format($jasa->harga,2) }}</h2>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-              <div class="card noborder">
-                <img src="{{ asset('assets/images/jasa-2.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body no-paddingleft">
-                  <h4 class="mb-2">Wedding March Factory</h4>
-                  <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                  <div class="d-flex mb-2">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                  </div>
-                  <h2 class="text-primary text-ptserif">Rp 1500.000</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-              <div class="card noborder">
-                <img src="{{ asset('assets/images/jasa-3.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body no-paddingleft">
-                  <h4 class="mb-2">Wedding March Factory</h4>
-                  <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                  <div class="d-flex mb-2">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                  </div>
-                  <h2 class="text-primary text-ptserif">Rp 1500.000</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-              <div class="card noborder">
-                <img src="{{ asset('assets/images/jasa-4.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body no-paddingleft">
-                  <h4 class="mb-2">Wedding March Factory</h4>
-                  <p class="mb-2 font-light">Tomang, Jakarta Selatan</p>
-                  <div class="d-flex mb-2">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                    <img class="mr-2" src="{{ asset('assets/images/star-full.png') }}" alt="">
-                  </div>
-                  <h2 class="text-primary text-ptserif">Rp 1500.000</h2>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>
   
-      <div class="home-section mb-5">
+      <!-- <div class="home-section mb-5">
         <div class="container">
           <h2 class="text-ptserif mb-2 text-white">Jasa yang paling dicari</h2>
           <div class="d-flex justify-content-between mb-3">
@@ -317,7 +179,7 @@
           </div>
         </div>
       </div>
-  
+   -->
       <div class="container">
         <div class="mb-5">
           <h2 class="text-ptserif mb-2">Jasa terbaik</h2>

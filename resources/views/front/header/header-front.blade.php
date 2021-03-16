@@ -12,7 +12,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <a href="{{ url('/vendor-sekitar') }}" class="text-regular text-secondary mx-3">Vendor disekitarmu</a>
+              <a href="{{ url('/list-vendor-sekitar') }}" class="text-regular text-secondary mx-3">Vendor disekitarmu</a>
               <a href="{{ url('/list-jasa-sekitar') }}" class="text-regular text-secondary mx-3">Jasa disekitarmu</a>
               <a href="" class="text-regular text-secondary mx-3">Jasa yang paling dicari</a>
               <a href="" class="text-regular text-secondary mx-3">Jasa terbaik</a>
@@ -30,7 +30,9 @@
               </div>
             </div>
           </div>
-          <div id="menuside-nonlogin" class="d-flex flex-column align-items-center">
+
+          
+          <!-- <div id="menuside-nonlogin" class="d-flex flex-column align-items-center">
             <i class="fas fa-times" onclick="closeSidemenu()" style="position: absolute; right: 5%; top: 10%; font-size: 20px; cursor: pointer;"></i>
             <img src="{{ asset('assets/images/logo.png') }}" alt="">
             <div class="d-flex mt-3 mb-5">
@@ -44,6 +46,6 @@
               <a href="" class="text-regular text-secondary mx-1 my-2">Jasa terbaik</a>
               <a href="" class="text-regular text-secondary mx-1 my-2">Jasa top bulan ini</a>
             </div>
-          </div>
+          </div> -->
         </div>
     </header>

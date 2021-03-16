@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JasaSekitar;
+use App\Http\Controllers\VendorSekitar;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,6 @@ Route::get('/',[HomeController::class,'index']);
 
 // ROUTE JASA SEKITAR
 Route::get('/list-jasa-sekitar',[JasaSekitar::class,'index']); 
+
+// ROUTE VENDOR SEKITAR
+Route::get('/list-vendor-sekitar',[VendorSekitar::class,'index']); 
